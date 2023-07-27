@@ -6,3 +6,5 @@ netmask: 255.255.255.0
 gateway: "{{network}}1"
 nameserver0: 8.8.8.8
 nameserver1: 8.8.4.4
+
+source_template: 50-static-ip.yaml

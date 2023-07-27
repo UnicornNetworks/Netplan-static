@@ -1,6 +1,6 @@
-- name: Template /etc/netplan/config.yaml
+- name: Template netplan config.yaml
   ansible.builtin.template:
-    src: 50-static-ip.yaml.j2
+    src: "{{source_template}}.j2"
     dest: "{{dest_file}}"
     owner: root
     group: root

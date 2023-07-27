@@ -1,10 +1,8 @@
-dir: /etc/netplan
-
-file: "{{dir}}/{{file_name}}"
-
-
 # If Vagrant:
 # Future: Use "{{ 50-vagrant.yaml if 'vagrant' else 50-static-ip.yaml}}" make it dynamic!
-file_name: 50-vagrant.yaml
 vagrant_interface: "{{ansible_interfaces[1]}}"
-dest_file: 50-vagrant.yaml
+dest_name: 50-vagrant.yaml
+
+
+dir: /etc/netplan
+dest_file: "{{dir}}/{{dest_name}}"
