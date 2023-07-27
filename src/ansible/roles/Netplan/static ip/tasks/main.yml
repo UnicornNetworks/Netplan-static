@@ -7,3 +7,13 @@
     mode: '0600'
   become: true
   notify: apply netplan
+
+- name: Fix permissions
+  ansible.builtin.file:
+    path: /etc/netplan
+    owner: root
+    group: root
+    mode: '0600'
+    recurse: yes
+  become: true
+    
