@@ -1,3 +1,5 @@
+vagrant_interface: "{{ansible_interfaces[2]}}"
+
 num: 3
 network: "10.0.1."
 ip: "{{network}}{{num}}"
