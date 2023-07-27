@@ -5,6 +5,8 @@ network:
     {{vagrant_interface}}:
       dhcp4: no
       addresses: [{{ip}}/{{netmask_bits}}]
-      gateway4: {{gateway}}
+      routes:
+      - to: default
+        via: {{gateway}}
       nameservers:
         addresses: [{{nameserver0}},{{nameserver1}}]

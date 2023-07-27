@@ -2,8 +2,6 @@
   ansible.builtin.template:
     src: "{{source_template}}.j2"
     dest: "{{dest_file}}"
-    owner: root
-    group: root
     mode: '0600'
   become: true
   notify: apply netplan
@@ -16,4 +14,5 @@
     mode: '0600'
     recurse: yes
   become: true
-    
+
+# https://unix.stackexchange.com/questions/681220/netplan-generate-gateway4-has-been-deprecated-use-default-routes-instead
