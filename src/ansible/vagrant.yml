@@ -1,6 +1,7 @@
 - name: Gnome VM
-  hosts: default
+  hosts: all
   remote_user: vagrant
 
   roles:
     - Netplan/static ip
+    - setup

@@ -1,0 +1,10 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    {{vagrant_interface}}:
+      dhcp4: no
+      addresses: [{{ip}}/{{netmask_bits}}]
+      gateway4: {{gateway}}
+      nameservers:
+        addresses: [{{nameserver0}},{{nameserver1}}]

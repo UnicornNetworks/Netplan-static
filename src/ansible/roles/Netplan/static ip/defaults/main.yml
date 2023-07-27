@@ -1,0 +1,8 @@
+num: 3
+network: "10.0.1."
+ip: "{{network}}{{num}}"
+netmask_bits: 24
+netmask: 255.255.255.0
+gateway: "{{network}}1"
+nameserver0: 8.8.8.8
+nameserver1: 8.8.4.4
